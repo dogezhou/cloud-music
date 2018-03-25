@@ -6,7 +6,7 @@
         },
         render(data) {
             let { song, status } = data
-            this.$el.css('background-image', `url(${song.cover})`)
+            this.$el.find('.background-image').css('background-image', `url(${song.cover})`)
             this.$el.find('img.cover').attr('src', song.cover)
             if (this.$el.find('audio').attr('src') !== song.url) {
                 let audio = this.$el.find('audio').attr('src', song.url).get(0)
@@ -22,7 +22,6 @@
             
             this.$el.find('.song-description>h1').text(song.name)
             let { lyrics } = song
-            console.log('lyrics', lyrics)
             lyrics.split('\n').map((string) => {
                 let p = document.createElement('p')
                 let regex = /\[([\d:.]+)\](.+)/
