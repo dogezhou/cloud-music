@@ -35,7 +35,7 @@
                     let newTime = parseInt(minutes, 10) * 60 + parseFloat(seconds, 10)
                     p.setAttribute('data-time', newTime)
                 } else {
-                    p.textContent = string
+                    p.textContent = string      // 没有时间轴
                 }
                 this.$el.find('.lyric>.lines').append(p)
             })
@@ -57,7 +57,7 @@
                     }
                 }
             }
-            let pHeight = p.getBoundingClientRect().top
+            let pHeight = p.getBoundingClientRect().top     // getBoundingClientRect 获取元素位置
             let linesHeight = this.$el.find('.lyric>.lines')[0].getBoundingClientRect().top
             let height = pHeight - linesHeight
             this.$el.find('.lyric>.lines').css({
@@ -102,15 +102,16 @@
             this.bindEvents()
         },
         bindEvents() {
-            $(this.view.el).on('click', '.icon-play', () => {
-                this.model.data.status = 'playing'
-                this.view.render(this.model.data)
-                this.view.play()
-            })
-            $(this.view.el).on('click', '.icon-pause', () => {
-                this.model.data.status = 'paused'
-                this.view.render(this.model.data)
-                this.view.pause()
+            this.view.$el.on('click', '.disc-container, .song-description', () => {
+                if (this.model.data.status === 'playing') {
+                    this.model.data.status = 'paused'
+                    this.view.render(this.model.data)
+                    this.view.pause()                    
+                } else {
+                    this.model.data.status = 'playing'
+                    this.view.render(this.model.data)
+                    this.view.play()
+                }
             })
             window.eventHub.on('songEnd', () => {
                 this.model.data.status = 'paused'

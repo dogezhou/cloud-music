@@ -24,7 +24,7 @@
 .disc-container{position: relative; }
 .disc-container .icon-wrapper{position: absolute; z-index: 1; display: flex; 
 	justify-content: center; align-items: center;
-	border: 1px solid white; height: 20vw; width: 20vw;
+	border: 1px solid white; height: 10vw; width: 10vw;
 	border-radius: 50%; background: rgba(0,0,0,0.5);
 }
 .disc-container .icon {width: 10vw; fill: white;}
@@ -35,6 +35,9 @@
 .disc-container .cover{width: 44.5vw; position: absolute; border-radius: 50%;  
   animation: circle 20s infinite linear; 
   animation-play-state: paused;
+}
+.disc-container.playing .icon-wrapper {
+	display: none;
 }
 .disc-container.playing .light,
 .disc-container.playing .cover{
