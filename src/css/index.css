@@ -202,3 +202,61 @@ section.art .copyright{
   color: #888;
   transform: scale(.75);
 }
+
+/* 热门音乐 */
+.hottop-banner {
+  padding-top: 38.9%;
+  background: url(../img/hottop-banner.jpg) no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.hottop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+.hottopct {  
+  width: 142px;
+  height: 67px;
+  background-position: -24px -30px;
+  background-image: url(../img/hottop-text.png);
+  background-size: 166px 97px;    
+}
+
+section.hottop-content > .hot-list {
+}
+
+section.hottop-content > .hot-list > li > p{
+  font-size: 12px;
+  color: #888;
+}
+section.hottop-content > .hot-list > li{
+  position: relative;
+  margin-left: 10px;
+  padding-bottom: 6px;
+  padding-top: 5px;
+  border-bottom: 1px solid #E2E2E3;
+}
+section.hottop-content > .hot-list .playButton{
+  position: absolute;
+  right:8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section.hottop-content > .hot-list .icon-play{
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  fill: #AAA;
+}
+section.hottop-content > .hot-list .icon-sq{
+  fill: #FE672E;
+}

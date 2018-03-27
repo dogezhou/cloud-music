@@ -47,10 +47,10 @@
             </section>
             <section id="tabs" class="globalTabs">
                 <ol class="tabs-nav">
-                    <li class=active data-tab-name="page-1">
+                    <li data-tab-name="page-1">
                         <div class="text"> 推荐音乐 </div>
                     </li>
-                    <li data-tab-name="page-2">
+                    <li class=active data-tab-name="page-2">
                         <div class="text">热歌榜</div>
                     </li>
                     <li data-tab-name="page-3">
@@ -60,7 +60,7 @@
             </section>
         </div>
         <ol class="tab-content noCollapse">
-            <li class="page-1 active">
+            <li class="page-1">
                 <section class="playlists">
                     <h2 class="sectionTitle">推荐歌单</h2>
                     <ol class="songs">
@@ -151,7 +151,18 @@
                     </div>
                 </section>
             </li>
-            <li class="page-2">page 2</li>
+            <li class="page-2 active">
+                <section class="hottop-banner">
+                    <div class="hottop">
+                        <div class="hottopct">
+                        </div>
+                    </div>
+                </section>
+                <section class="hottop-content">
+                    <ol id="hot-list" class="hot-list">
+                        </ol>                    
+                </section>
+            </li>
             <li class="page-3">
                 <input id="search" type="text" style="background:#EBECEC;">
                 <ol id="searchResult"></ol>
