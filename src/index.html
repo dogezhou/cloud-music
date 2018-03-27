@@ -47,10 +47,10 @@
             </section>
             <section id="tabs" class="globalTabs">
                 <ol class="tabs-nav">
-                    <li data-tab-name="page-1">
+                    <li class=active data-tab-name="page-1">
                         <div class="text"> 推荐音乐 </div>
                     </li>
-                    <li class=active data-tab-name="page-2">
+                    <li data-tab-name="page-2">
                         <div class="text">热歌榜</div>
                     </li>
                     <li data-tab-name="page-3">
@@ -60,7 +60,7 @@
             </section>
         </div>
         <ol class="tab-content noCollapse">
-            <li class="page-1">
+            <li class="page-1 active">
                 <section class="playlists">
                     <h2 class="sectionTitle">推荐歌单</h2>
                     <ol class="songs">
@@ -151,7 +151,7 @@
                     </div>
                 </section>
             </li>
-            <li class="page-2 active">
+            <li class="page-2">
                 <section class="hottop-banner">
                     <div class="hottop">
                         <div class="hottopct">
@@ -164,8 +164,26 @@
                 </section>
             </li>
             <li class="page-3">
-                <input id="search" type="text" style="background:#EBECEC;">
-                <ol id="searchResult"></ol>
+                <div class="search">
+                    <div class="search-wrapper">
+                        <input id="search" type="text" placeholder="搜索歌曲、歌手、专辑">
+                    </div>
+                    <ol id="searchResult"></ol>
+                </div>
+                <div class="hot-search">
+                    <h3 class="title">热门搜索</h3>
+                    <ul class="list">
+                        <li>谎人国</li>
+                        <li>披头士</li>
+                        <li>谎人国</li>
+                        <li>披头士</li>
+                        <li>谎人国</li>
+                        <li>披头士</li>
+                        <li>披头士</li>
+                        <li>谎人国</li>
+                        <li>披头士</li>
+                    </ul>
+                </div>
             </li>
         </ol>
     </div>
